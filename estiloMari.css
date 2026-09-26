@@ -1,0 +1,443 @@
+/* ==========================================
+   PALETA DE COLORES (Extraída de la imagen)
+   ========================================== */
+:root {
+  --color-purple-light: #E0B0FF; /* Lila */
+  --color-purple-soft:  #C8A2C8; /* Malva soft */
+  --color-rose:         #DD969C; /* Rosa viejo */
+  --color-cream:        #FFE5B4; /* Crema / Melocotón */
+  --color-white:        #FFFFFF; /* Blanco */
+  --color-text:         #4A3E4E; /* Texto oscuro suave */
+  --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   RESET Y ESTILOS GENERALES
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #FAF6F0;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+h1, h2, h3, .brand-name {
+  font-family: 'Fredoka', cursive;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================
+   HEADER Y NAVEGACIÓN
+   ========================================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-soft);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-purple-soft);
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  color: var(--color-rose);
+  font-weight: 700;
+}
+
+/* Búsqueda */
+.search-container {
+  position: relative;
+  width: 280px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  border-radius: 20px;
+  border: 2px solid var(--color-purple-light);
+  outline: none;
+  font-family: 'Quicksand', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+  border-color: var(--color-rose);
+  box-shadow: 0 0 8px rgba(221, 150, 156, 0.3);
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-purple-soft);
+}
+
+.search-results {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  background: var(--color-white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.search-results a {
+  padding: 10px 15px;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.search-results a:hover {
+  background-color: var(--color-cream);
+}
+
+/* Menú */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--color-rose);
+}
+
+.btn-nav-contact {
+  background-color: var(--color-rose);
+  color: var(--color-white) !important;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: transform 0.2s, background-color 0.3s !important;
+}
+
+.btn-nav-contact:hover {
+  background-color: var(--color-purple-soft) !important;
+  transform: translateY(-2px);
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--color-rose);
+  cursor: pointer;
+}
+
+/* ==========================================
+   HERO / INICIO
+   ========================================== */
+.hero {
+  background: linear-gradient(135deg, var(--color-purple-light) 0%, var(--color-cream) 100%);
+  padding: 90px 20px;
+  text-align: center;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  color: var(--color-text);
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 25px auto;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--color-rose);
+  color: var(--color-white);
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-purple-soft);
+  transform: translateY(-3px);
+}
+
+/* ==========================================
+   SECCIONES GENERALES
+   ========================================== */
+section {
+  padding: 70px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--color-rose);
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--color-purple-soft);
+  font-weight: 600;
+}
+
+/* Nosotros */
+.about-card {
+  background: var(--color-white);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: var(--shadow-soft);
+  border-left: 8px solid var(--color-purple-light);
+  text-align: center;
+}
+
+.about-card h2 {
+  color: var(--color-rose);
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Productos */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: var(--color-white);
+  padding: 30px 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-cream);
+  color: var(--color-rose);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 15px auto;
+}
+
+/* Galería / Muestras */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  height: 280px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(221, 150, 156, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Fredoka', cursive;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 10px;
+  text-align: center;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* Contacto */
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: var(--color-white);
+  padding: 35px 25px;
+  border-radius: 20px;
+  text-align: center;
+  width: 300px;
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.contact-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.whatsapp .contact-icon { color: #25D366; }
+.tiktok .contact-icon { color: #000000; }
+
+.btn-action {
+  margin-top: 15px;
+  border: none;
+  background-color: var(--color-purple-light);
+  color: var(--color-text);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-card:hover .btn-action {
+  background-color: var(--color-rose);
+  color: white;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-purple-soft);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ANIMACIONES */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 768px) {
+  .search-container {
+    width: 180px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    box-shadow: var(--shadow-soft);
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
